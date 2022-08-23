@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Ballon d'Or Award</title>
+</head>
+
+<body>
+  <main class="font-serif">
+    <header class="header">
+      <div class="bg-slate-800 p-20 px-80 text-center">
+        <h1 class="font-bold text-[#FF5E19] text-[3rem]">
+          Hire A Football Legend For Your Event
+        </h1>
+        <p class="text-white mt-5">
+          Football is one of the most celebrated and viewed sports in the world. Here, we are offering you the chance to
+          hire a football legend for your event and create everlasting memories.
+        </p>
+      </div>
+    </header>
+
+    <section class="bg-slate-500 text-black">
+      <div class="lg:flex p-10 mx-10 ml-40">
+        <div class="mx-10 border-solid border-2 border-[#434343] bg-white">
+          <img class="object-cover h-48 w-40" src="images/Lionel_Messi_20180626.jpg" alt="" />
+          <div class="text-center p-2">
+            <h1 class="font-bold">Lionel Messi</h1>
+            <span>56 Goals</span>
+            <span>.</span>
+            <span>60 Assist</span>
+            <br />
+            <button id="btn-submit" class="bg-sky-500 px-6 mt-4 disabled:opacity-25 text-white" type="submit"
+              onclick="addToList(this);this.disabled = true;">
+              Select
+            </button>
+          </div>
+        </div>
+        <div class="mx-10 border-solid border-2 border-[#434343] bg-white">
+          <img class="object-cover h-48 w-40" src="images/Neymar Jr.png" alt="" />
+          <div class="text-center p-2">
+            <h1 class="font-bold">Neymar Jr</h1>
+            <span>50 Goals</span>
+            <span>.</span>
+            <span>48 Assist</span>
+            <br />
+            <button id="btn-submit" class="bg-sky-500 px-6 mt-4 disabled:opacity-25 text-white" type="submit"
+              onclick="addToList(this);this.disabled = true;">
+              Select
+            </button>
+          </div>
+        </div>
+        <div class="mx-10 border-solid border-2 border-[#434343] bg-white">
+          <img class="object-cover h-48 w-40" src="images/Kylian Mbappe.jpg" alt="" />
+          <div class="text-center p-2">
+            <h1 class="font-bold">Kylian Mbappe</h1>
+            <span>46 Goals</span>
+            <span>.</span>
+            <span>45 Assist</span>
+            <br />
+            <button id="btn-submit" class="bg-sky-500 px-6 mt-4 disabled:opacity-25 text-white" type="submit"
+              onclick="addToList(this);this.disabled = true;">
+              Select
+            </button>
+          </div>
+        </div>
+
+        <div class=" mx-10 border-[#434343] p-2 px-30 text-center font-bold bg-white w-1/5 ">
+          <h1>Selected - V</h1>
+          <ul id="display" class="ml-2 mt-5">
+
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-500 text-black">
+      <div class="lg:flex">
+        <div class="lg:flex p-10 mx-10 ml-40">
+          <div class="mx-10 border-solid border-2 border-[#434343] bg-white">
+            <img class="object-cover h-80 w-40" src="images/Ronaldo.jpg" alt="" />
+            <div class="text-center p-2">
+              <h1 class="font-bold">Crist. Ronaldo</h1>
+              <span>46 Goals</span>
+              <span>.</span>
+              <span>50 Assist</span>
+              <br />
+              <button id="btn-submit" class="bg-sky-500 px-6 mt-4 disabled:opacity-25 text-white" type="submit"
+                onclick="addToList(this);this.disabled = true;">
+                Select
+              </button>
+            </div>
+          </div>
+          <div class="mx-10 border-solid border-2 border-[#434343] bg-white">
+            <img class="object-cover h-80 w-40" src="images/Vítor Machado.jpg" alt="" />
+            <div class="text-center p-2">
+              <h1 class="font-bold">Vitor Machado</h1>
+              <span>40 Goals</span>
+              <span>.</span>
+              <span>45 Assist</span>
+              <br />
+              <button id="btn-submit" class="bg-sky-500 px-6 mt-4 disabled:opacity-25 text-white" type="submit"
+                onclick="addToList(this);this.disabled = true;">
+                Select
+              </button>
+            </div>
+          </div>
+          <div class="mx-10 border-solid border-2 border-[#434343] bg-white">
+            <img class="object-cover h-80 w-40" src="images/Renato Sanches.jpg" alt="" />
+            <div class="text-center p-2">
+              <h1 class="font-bold">Renato Sanches</h1>
+              <span>36 Goals</span>
+              <span>.</span>
+              <span>40 Assist</span>
+              <br />
+              <button id="btn-submit" class="bg-sky-500 px-6 mt-4 disabled:opacity-25 text-white" type="submit"
+                onclick="addToList(this);this.disabled = true;">
+                Select
+              </button>
+            </div>
+          </div>
+          <div class="border-solid border-2 bg-white mx-12">
+            <div class="border-[#434343] p-4 px-2 text-center font-bold bg-white">
+              <h1>Budget</h1>
+              <input class="mt-2 bg-slate-400 border-solid border-2 text-black" type="number" name="" id="budget" />
+              <br />
+              <button id="btn-calculate" class="bg-sky-500 px-6 mt-4 text-white" type="submit">
+                Calculate
+              </button>
+              <h2 class="mt-4">
+                Player Expenses: $<span id="expenses">00</span>
+              </h2>
+            </div>
+            <div class="text-center font-bold">
+              <h1 class="mt-6">Manager</h1>
+              <input class="mt-2 bg-slate-400 border-solid border-2  text-black " type="number" name="" id="manager" />
+              <h1 class="mt-2">Coach</h1>
+              <input class="mt-2 bg-slate-400 border-solid border-2 text-black" type="number" name="" id="coach" />
+              <br />
+              <button id="btn-total" class="bg-sky-500 px-6 mt-4 text-white" type="submit">
+                Calculate Total
+              </button>
+              <h2 class="mt-4">Total Expenses: $<span id="total">00</span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="mt-10">
+      </hr>
+      <footer class="p-10">
+        <p class="text-center text-black">Copyright @ 2022 All Rights Reserved.</p>
+      </footer>
+    </section>
+  </main>
+  <script src="js/player.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/budget.js"></script>
+  <script src="js/total.js"></script>
+</body>
+
+</html>
